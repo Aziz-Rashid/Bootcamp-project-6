@@ -28,10 +28,18 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthGrid() {
   const classes = useStyles();
   const [istrue, settrue] = useState(false)
+  const [load, setload] = useState(false)
+  const [istruee, setistrue] = useState(false)
 
     setTimeout(()=>{
       settrue(true)
-    },5000)
+    },7000)
+    setTimeout(()=>{
+      setload(true)
+    },10000)
+    setTimeout(()=>{
+      setistrue(true)
+    },15000)
     useEffect(() =>{
       Aos.init({duration: 2000})
   },[])
@@ -55,7 +63,7 @@ export default function FullWidthGrid() {
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
         <Paper className={classes.paper}  data-aos="flip-left">
-        {istrue === false? <div><img width="100%" src={loading} alt=""/></div>: <div><img src={nice} alt="" width="100%" /></div>}
+        {load === false? <div><img width="100%" src={loading} alt=""/></div>: <div><img src={nice} alt="" width="100%" /></div>}
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6}>
@@ -69,7 +77,7 @@ export default function FullWidthGrid() {
   <Grid container spacing={3}>
     <Grid item xs={12} sm={6}>
       <Paper className={classes.paper} data-aos="flip-left">
-      {istrue === false? <div><img width="100%" alt="" src={k} /></div>: <div><img src={Glhy} width="100%" alt=""/></div>}
+      {istruee === false? <div><img width="100%" alt="" src={k} /></div>: <div><img src={Glhy} width="100%" alt=""/></div>}
       </Paper>
     </Grid>
     <Grid item xs={12} sm={6}>

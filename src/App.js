@@ -8,7 +8,7 @@ function App() {
   const [loader,setloader] = useState(false)
   setTimeout(()=>{
     setloader(true)
-  },500)
+  },5000)
   if(loader === false){
       return (
         <div>
