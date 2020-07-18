@@ -184,7 +184,7 @@ export default function PrimarySearchAppBar() {
                             Blog
             </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
-                            Contact Us
+                            Contact us
             </IconButton>
                         <IconButton
                             edge="end"
