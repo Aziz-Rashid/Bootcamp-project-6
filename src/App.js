@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React,{useState} from 'react';
+import Nav from './components/Nav'
+import Body from './components/Body'
+import Animation from './components/Animation'
+import Blogs from './components/Blogs'
+import load from './components/page.gif'
 function App() {
+  const [loader,setloader] = useState(false)
+  setTimeout(()=>{
+    setloader(true)
+  },500)
+  if(loader === false){
+      return (
+        <div>
+        <img src={load} width="100%" alt=""/>
+        </div>
+      )
+  }else{
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Nav />
+      <Body />
+      <Animation />
+      <Blogs />
+      
     </div>
   );
+}
 }
 
 export default App;
