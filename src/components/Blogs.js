@@ -36,10 +36,10 @@ export default function FullWidthGrid() {
     },7000)
     setTimeout(()=>{
       setload(true)
-    },10000)
+    },12000)
     setTimeout(()=>{
       setistrue(true)
-    },15000)
+    },18000)
     useEffect(() =>{
       Aos.init({duration: 2000})
   },[])
